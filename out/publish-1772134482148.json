@@ -1,0 +1,154 @@
+{
+  "board_id": "board_demo",
+  "decision_id": "2f525949-2b65-45ae-af73-f35214834368",
+  "timestamp": "2026-02-26T19:34:42.135Z",
+  "persona_set_id": "de3b5522-13d2-4d78-864f-4c6e90e0bebd",
+  "votes": [
+    {
+      "persona_id": "persona_1",
+      "name": "Clarity Editor",
+      "reputation_before": 0.55,
+      "vote": "NO",
+      "confidence": 0.9,
+      "reasons": [
+        "Policy risk"
+      ],
+      "red_flags": [
+        "SENSITIVE_DATA",
+        "LEGAL_CLAIM",
+        "CONFIDENTIALITY_BREACH",
+        "DISALLOWED_GUARANTEE"
+      ],
+      "suggested_edits": [
+        "Remove claims and sensitive details"
+      ]
+    },
+    {
+      "persona_id": "persona_2",
+      "name": "Trust Builder",
+      "reputation_before": 0.64,
+      "vote": "NO",
+      "confidence": 0.9,
+      "reasons": [
+        "Policy risk"
+      ],
+      "red_flags": [
+        "SENSITIVE_DATA",
+        "LEGAL_CLAIM",
+        "CONFIDENTIALITY_BREACH",
+        "DISALLOWED_GUARANTEE"
+      ],
+      "suggested_edits": [
+        "Remove claims and sensitive details"
+      ]
+    },
+    {
+      "persona_id": "persona_3",
+      "name": "Tone Coach",
+      "reputation_before": 0.73,
+      "vote": "NO",
+      "confidence": 0.9,
+      "reasons": [
+        "Policy risk"
+      ],
+      "red_flags": [
+        "SENSITIVE_DATA",
+        "LEGAL_CLAIM",
+        "CONFIDENTIALITY_BREACH",
+        "DISALLOWED_GUARANTEE"
+      ],
+      "suggested_edits": [
+        "Remove claims and sensitive details"
+      ]
+    },
+    {
+      "persona_id": "persona_4",
+      "name": "Audience Analyst",
+      "reputation_before": 0.81,
+      "vote": "NO",
+      "confidence": 0.9,
+      "reasons": [
+        "Policy risk"
+      ],
+      "red_flags": [
+        "SENSITIVE_DATA",
+        "LEGAL_CLAIM",
+        "CONFIDENTIALITY_BREACH",
+        "DISALLOWED_GUARANTEE"
+      ],
+      "suggested_edits": [
+        "Remove claims and sensitive details"
+      ]
+    },
+    {
+      "persona_id": "persona_5",
+      "name": "Crisis Communicator",
+      "reputation_before": 0.9,
+      "vote": "NO",
+      "confidence": 0.9,
+      "reasons": [
+        "Policy risk"
+      ],
+      "red_flags": [
+        "SENSITIVE_DATA",
+        "LEGAL_CLAIM",
+        "CONFIDENTIALITY_BREACH",
+        "DISALLOWED_GUARANTEE"
+      ],
+      "suggested_edits": [
+        "Remove claims and sensitive details"
+      ]
+    }
+  ],
+  "aggregation": {
+    "method": "WEIGHTED_APPROVAL_VOTE",
+    "weighted_yes": 0,
+    "weighted_no": 1,
+    "weighted_rewrite": 0,
+    "hard_block": true,
+    "rationale": [
+      "hard_block detected"
+    ]
+  },
+  "final_decision": "BLOCK",
+  "rewrite_patch": {},
+  "persona_updates": [
+    {
+      "persona_id": "persona_1",
+      "reputation_after": 0.57,
+      "delta": 0.02
+    },
+    {
+      "persona_id": "persona_2",
+      "reputation_after": 0.66,
+      "delta": 0.02
+    },
+    {
+      "persona_id": "persona_3",
+      "reputation_after": 0.75,
+      "delta": 0.02
+    },
+    {
+      "persona_id": "persona_4",
+      "reputation_after": 0.83,
+      "delta": 0.02
+    },
+    {
+      "persona_id": "persona_5",
+      "reputation_after": 0.92,
+      "delta": 0.02
+    }
+  ],
+  "board_writes": [
+    {
+      "type": "decision",
+      "success": true,
+      "ref": "sub_867cd911-3633-4fda-97ae-4a57696e64df"
+    },
+    {
+      "type": "persona_set",
+      "success": true,
+      "ref": "sub_e1401152-6a06-4b17-9db2-80fcfe5f1ca8"
+    }
+  ]
+}
