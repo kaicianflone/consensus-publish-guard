@@ -39,3 +39,7 @@ Public content quality improves over time because mistakes become artifacts, not
 - **State substrate**: consensus-tools decision/persona artifacts
 - **Primary output**: publish decision + updated persona set
 - **Primary benefit**: safer, more reliable public communication
+
+## Tool-call boundary
+
+To avoid orchestration drift, this skill routes board operations through the consensus-interact contract surface (directly or via guard-core wrappers). This preserves a single governance interaction model while allowing domain-specific decision logic.
