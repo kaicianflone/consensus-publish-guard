@@ -4,7 +4,7 @@ description: Persona-weighted governance for outbound publishing (blog, social, 
 homepage: https://github.com/kaicianflone/consensus-publish-guard
 source: https://github.com/kaicianflone/consensus-publish-guard
 metadata:
-  {"openclaw": {"requires": {"bins": ["node", "npm", "tsx"]}}}
+  {"openclaw": {"requires": {"bins": ["node", "tsx"]}}}
 ---
 
 # consensus-publish-guard
@@ -32,6 +32,21 @@ Uses persona panels from `consensus-persona-generator` and deterministic logic f
 - AI-assisted social/media pipelines
 - product launch copy checks
 - policy-sensitive communications
+
+
+## Runtime, credentials, and network behavior
+
+- runtime binaries: `node`, `tsx`
+- network calls: none in the guard decision path itself
+- conditional network behavior: if a run needs persona generation and your persona-generator backend uses an external LLM, that backend may perform outbound API calls
+- credentials: `OPENAI_API_KEY` (or equivalent provider key) may be required **only** for persona generation in LLM-backed setups; if `persona_set_id` is provided, guards can run without LLM credentials
+- filesystem writes: board/state artifacts under the configured consensus state path
+
+## Dependency trust model
+
+- `consensus-guard-core` and `consensus-persona-generator` are first-party consensus packages
+- versions are semver-pinned in `package.json` for reproducible installs
+- this skill does not request host-wide privileges and does not mutate other skills
 
 ## Quick start
 
