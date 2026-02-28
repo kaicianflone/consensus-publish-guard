@@ -4,7 +4,7 @@ description: Persona-weighted governance for outbound publishing (blog, social, 
 homepage: https://github.com/kaicianflone/consensus-publish-guard
 source: https://github.com/kaicianflone/consensus-publish-guard
 metadata:
-  {"openclaw": {"requires": {"bins": ["node", "tsx"]}}}
+  {"openclaw": {"requires": {"bins": ["node", "tsx"], "env": ["OPENAI_API_KEY"]}}}
 ---
 
 # consensus-publish-guard
