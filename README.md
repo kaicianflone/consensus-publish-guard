@@ -1,31 +1,38 @@
 # consensus-publish-guard
 
-Pre-publish governance for outward-facing content (blog, social, announcements, outbound statements).
+Pre-publish policy governance for outward-facing content.
 
-`consensus-publish-guard` applies persona-weighted review before content is sent or posted and returns:
+`consensus-publish-guard` evaluates content before it goes live (social posts, announcements, release notes, outbound statements) and returns:
 
 - `ALLOW`
 - `BLOCK`
 - `REQUIRE_REWRITE`
 
-## Why teams use it
+## Why it exists
 
-Publishing mistakes are expensive: trust loss, policy violations, and legal risk. This guard adds a deterministic quality gate before distribution.
+Publishing errors are hard to undo. This guard reduces legal, trust, and brand risk by enforcing deterministic checks before distribution.
+
+## What it evaluates
+
+- policy-sensitive claims and guarantees
+- confidentiality leakage risks
+- harmful/abusive language categories
+- unsupported certainty statements
+- quality and rewrite readiness
 
 ## Core capabilities
 
-- strict schema and unknown-field rejection
-- hard-block taxonomy support
-- weighted consensus aggregation
-- idempotent retries with stable decision replay
-- board-native decision + persona artifacts
+- strict input schema validation
+- hard-block taxonomy handling
+- persona-weighted voting or external votes
+- idempotent retry behavior
+- board-native artifact trail for replay and audit
 
-## Good fit for
+## Decision semantics
 
-- marketing and growth automation
-- support or community broadcast workflows
-- release announcement pipelines
-- AI-generated public responses
+- `BLOCK`: do not publish
+- `REQUIRE_REWRITE`: revise and resubmit with guardrails
+- `ALLOW`: safe to proceed under configured policy
 
 ## Quick start
 
@@ -40,6 +47,7 @@ node --import tsx run.js --input ./examples/input.json
 npm test
 ```
 
-## Continuous improvement
+## Related docs
 
-See `AI-SELF-IMPROVEMENT.md` for ongoing reliability and policy iteration.
+- `SKILL.md`
+- `AI-SELF-IMPROVEMENT.md`
