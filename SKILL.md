@@ -1,7 +1,7 @@
 ---
 name: consensus-publish-guard
 description: Persona-weighted governance for outbound publishing (blog, social, announcements). Prevents unsafe public claims via hard-block checks, weighted consensus, rewrite paths, and board-native audit artifacts.
-version: 1.1.14
+version: 1.1.15
 homepage: https://github.com/kaicianflone/consensus-publish-guard
 source: https://github.com/kaicianflone/consensus-publish-guard
 upstream:
@@ -26,9 +26,6 @@ metadata:
     install:
       - kind: node
         package: consensus-publish-guard
-        bins:
-          - node
-          - tsx
 ---
 
 # consensus-publish-guard
@@ -86,6 +83,12 @@ Then install dependencies in this repo:
 
 ```bash
 npm i
+```
+
+## Install (registry)
+
+```bash
+npm i consensus-publish-guard
 ```
 
 ## Quick start
