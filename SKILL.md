@@ -3,8 +3,24 @@ name: consensus-publish-guard
 description: Persona-weighted governance for outbound publishing (blog, social, announcements). Prevents unsafe public claims via hard-block checks, weighted consensus, rewrite paths, and board-native audit artifacts.
 homepage: https://github.com/kaicianflone/consensus-publish-guard
 source: https://github.com/kaicianflone/consensus-publish-guard
-metadata:
-  {"openclaw": {"requires": {"bins": ["node", "tsx"], "env": ["CONSENSUS_STATE_FILE", "CONSENSUS_STATE_ROOT"]}}}
+upstream:
+  consensus-guard-core: https://github.com/kaicianflone/consensus-guard-core
+
+requires:
+  bins:
+    - node
+    - tsx
+  env:
+    - CONSENSUS_STATE_FILE
+    - CONSENSUS_STATE_ROOT
+install:
+  - id: npm
+    kind: node
+    package: consensus-publish-guard
+    bins:
+      - node
+      - tsx
+    label: Install consensus-publish-guard from npm
 ---
 
 # consensus-publish-guard
