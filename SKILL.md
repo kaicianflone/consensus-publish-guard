@@ -54,7 +54,6 @@ Uses deterministic logic from `consensus-guard-core` and existing persona inputs
 
 - runtime binaries: `node`, `tsx`
 - network calls: none in the guard decision path itself
-- credentials: none required
 - environment config read by this package: `CONSENSUS_STATE_FILE`, `CONSENSUS_STATE_ROOT`
 - filesystem writes: board/state artifacts under the configured consensus state path
 
